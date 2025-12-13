@@ -1,0 +1,19 @@
+{
+  "type": "industrialforegoingadditional:polishing_machine",
+  "input1": [
+    { "item": "minecraft:emerald" }
+  ],
+  "input2": [
+    { "item": "industrialforegoing:white_laser_lens" }
+  ],
+  "inputFluid1": {
+    "id": "minecraft:water",
+    "amount": 1000
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "industrialforegoingadditional:polished_emerald",
+    "count": 1
+  }
+}
+

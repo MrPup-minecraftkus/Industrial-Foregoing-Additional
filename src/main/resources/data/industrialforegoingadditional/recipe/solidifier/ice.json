@@ -1,0 +1,14 @@
+{
+  "type": "industrialforegoingadditional:solidifier",
+  "input": [],
+  "inputFluid": {
+    "id": "minecraft:water",
+    "amount": 1000
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "minecraft:ice",
+    "count": 1
+  }
+}
+

@@ -1,0 +1,14 @@
+{
+  "type": "industrialforegoingadditional:solidifier",
+  "input": [],
+  "inputFluid": {
+    "id": "industrialforegoing:pink_slime",
+    "amount": 250
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "industrialforegoing:pink_slime",
+    "count": 1
+  }
+}
+

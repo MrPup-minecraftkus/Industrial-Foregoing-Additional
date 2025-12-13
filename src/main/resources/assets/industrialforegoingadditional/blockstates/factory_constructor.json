@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "subfacing=east": {
+      "model": "industrialforegoingadditional:block/factory_constructor",
+      "y": 90
+    },
+    "subfacing=north": {
+      "model": "industrialforegoingadditional:block/factory_constructor"
+    },
+    "subfacing=south": {
+      "model": "industrialforegoingadditional:block/factory_constructor",
+      "y": 180
+    },
+    "subfacing=west": {
+      "model": "industrialforegoingadditional:block/factory_constructor",
+      "y": 270
+    }
+  }
+}

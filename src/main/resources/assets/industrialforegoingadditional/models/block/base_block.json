@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "industrialforegoingadditional:block/machine/side",
+    "north": "industrialforegoingadditional:block/machine/side",
+    "west": "industrialforegoingadditional:block/machine/side",
+    "east": "industrialforegoingadditional:block/machine/side",
+    "south": "industrialforegoingadditional:block/machine/side",
+    "up": "industrialforegoingadditional:block/machine/top",
+    "down": "industrialforegoingadditional:block/machine/bottom"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingadditional:machine_frame_ultimate"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "item": "industrialforegoing:machine_frame_supreme"
+    },
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    }
+  ],
+  "inputFluid": {
+    "amount": 100,
+    "id": "industrialforegoingadditional:darkest_void"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingadditional:machine_frame_ultimate"
+  },
+  "processingTime": 500
+}

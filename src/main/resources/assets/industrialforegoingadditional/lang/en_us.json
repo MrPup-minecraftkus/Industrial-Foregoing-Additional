@@ -1,0 +1,20 @@
+{
+  "itemGroup.industrialforegoingadditional_core": "Industrial Foregoing Additional: Core",
+
+  "item.industrialforegoingadditional.netherite_gear": "Netherite Gear",
+  "item.industrialforegoingadditional.darkest_void_bucket": "Darkest Void Bucket",
+  "item.industrialforegoingadditional.polished_diamond": "Polished Diamond",
+  "item.industrialforegoingadditional.polished_emerald": "Polished Diamond",
+  "item.industrialforegoingadditional.polished_amethyst_shard": "Polished Amethyst Shard",
+
+  "creativetab.industrialforegoingadditional.industrial_foregoing_additional_items": "Industrial Foregoing Additional",
+
+  "fluid_type.industrialforegoingadditional.darkest_void": "Darkest Void",
+
+  "block.industrialforegoingadditional.machine_frame_ultimate": "Ultimate Machine Frame",
+  "block.industrialforegoingadditional.factory_constructor": "Factory Constructor",
+  "block.industrialforegoingadditional.polishing_machine": "Polishing Machine",
+  "block.industrialforegoingadditional.upgraded_constructor": "Upgraded Constructor",
+  "block.industrialforegoingadditional.repair_machine": "Repair Machine",
+  "block.industrialforegoingadditional.solidifier": "Solidifier"
+}

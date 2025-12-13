@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingadditional:speed_addon_tier_3"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1500,
+    "id": "industrialforegoing:latex"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingadditional:speed_addon_tier_3"
+  },
+  "processingTime": 250
+}

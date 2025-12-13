@@ -1,0 +1,14 @@
+{
+  "type": "industrialforegoingadditional:solidifier",
+  "input": [],
+  "inputFluid": {
+    "id": "industrialforegoing:latex",
+    "amount": 250
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "industrialforegoing:dryrubber",
+    "count": 1
+  }
+}
+

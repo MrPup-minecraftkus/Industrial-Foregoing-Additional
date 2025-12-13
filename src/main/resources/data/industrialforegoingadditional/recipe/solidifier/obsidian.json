@@ -1,0 +1,14 @@
+{
+  "type": "industrialforegoingadditional:solidifier",
+  "input": [],
+  "inputFluid": {
+    "id": "minecraft:lava",
+    "amount": 1000
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "minecraft:obsidian",
+    "count": 1
+  }
+}
+

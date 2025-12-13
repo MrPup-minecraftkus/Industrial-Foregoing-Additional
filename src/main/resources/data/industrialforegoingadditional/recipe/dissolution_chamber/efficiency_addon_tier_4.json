@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingadditional:efficiency_addon_tier_4"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "industrialforegoingadditional:efficiency_addon_tier_3"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "inputFluid": {
+    "amount": 100,
+    "id": "industrialforegoing:ether_gas"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingadditional:efficiency_addon_tier_4"
+  },
+  "processingTime": 300
+}

@@ -1,0 +1,19 @@
+{
+  "type": "industrialforegoingadditional:upgraded_constructor",
+  "input": [
+    { "item": "industrialforegoingadditional:processing_addon_tier_4" },
+    { "item": "industrialforegoingadditional:polished_emerald" },
+    { "item": "industrialforegoingadditional:polished_emerald" },
+    { "item": "industrialforegoingadditional:polished_emerald" }
+  ],
+  "inputFluid1": {
+    "id": "industrialforegoingadditional:darkest_void",
+    "amount": 250
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "industrialforegoingadditional:processing_addon_tier_5",
+    "count": 1
+  }
+}
+

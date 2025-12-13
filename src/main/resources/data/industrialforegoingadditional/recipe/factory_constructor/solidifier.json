@@ -1,0 +1,25 @@
+{
+  "type": "industrialforegoingadditional:factory_constructor",
+  "input": [
+    { "item": "industrialforegoingadditional:netherite_gear" },
+    { "item": "industrialforegoingadditional:machine_frame_ultimate" },
+    { "item": "minecraft:ice" },
+    { "item": "industrialforegoing:pink_slime_block" },
+    { "item": "industrialforegoing:stasis_chamber" },
+    { "item": "industrialforegoingadditional:netherite_gear" }
+  ],
+  "inputFluid1": {
+    "id": "industrialforegoing:ether_gas",
+    "amount": 250
+  },
+  "inputFluid2": {
+    "id": "industrialforegoingadditional:darkest_void",
+    "amount": 250
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "industrialforegoingadditional:solidifier",
+    "count": 1
+  }
+}
+

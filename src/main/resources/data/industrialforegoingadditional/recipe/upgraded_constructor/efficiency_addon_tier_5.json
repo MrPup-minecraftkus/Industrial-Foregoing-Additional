@@ -1,0 +1,19 @@
+{
+  "type": "industrialforegoingadditional:upgraded_constructor",
+  "input": [
+    { "item": "industrialforegoingadditional:efficiency_addon_tier_4" },
+    { "item": "industrialforegoingadditional:polished_diamond" },
+    { "item": "industrialforegoingadditional:polished_diamond" },
+    { "item": "industrialforegoingadditional:polished_diamond" }
+  ],
+  "inputFluid1": {
+    "id": "industrialforegoingadditional:darkest_void",
+    "amount": 250
+  },
+  "processingTime": 200,
+  "output": {
+    "id": "industrialforegoingadditional:efficiency_addon_tier_5",
+    "count": 1
+  }
+}
+

@@ -1,0 +1,6 @@
+{
+  "parent": "industrialforegoingadditional:block/base_block",
+  "textures": {
+    "north": "industrialforegoingadditional:block/machine/factory_constructor_front"
+  }
+}

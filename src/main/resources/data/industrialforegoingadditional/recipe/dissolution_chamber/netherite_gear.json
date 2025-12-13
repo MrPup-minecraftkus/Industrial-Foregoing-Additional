@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingadditional:factory_constructor"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoing:diamond_gear"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "tag": "c:plastics"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoing:diamond_gear"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "inputFluid": {
+    "amount": 250,
+    "id": "industrialforegoing:latex"
+  },
+  "output": {
+    "count": 2,
+    "id": "industrialforegoingadditional:netherite_gear"
+  },
+  "processingTime": 1000
+}

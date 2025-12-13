@@ -1,0 +1,45 @@
+modLoader="javafml"
+loaderVersion="4,"
+license="MIT License"
+
+[[mods]]
+modId="industrialforegoingadditional"
+version="1.0.0"
+displayName="Industrial Foregoing Additional"
+authors="MrPup(minecraftkus)"
+description='''Automate Everything(but more!)'''
+
+[[dependencies."industrialforegoingadditional"]]
+modId = "neoforge"
+type = "required"
+versionRange = "21,"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."industrialforegoingadditional"]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.0,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."industrialforegoingadditional"]]
+modId = "titanium"
+type = "required"
+versionRange = "[3.2.8,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."industrialforegoingadditional"]]
+modId = "industrialforegoing"
+type = "required"
+versionRange = "[1.21-3.6.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."industrialforegoingadditional"]]
+modId = "jei"
+type = "optional"
+versionRange = "[19.11.0,)"
+ordering = "NONE"
+side = "CLIENT"
