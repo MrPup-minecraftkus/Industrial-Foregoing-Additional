@@ -8,7 +8,7 @@
   "type": "industrialforegoing:dissolution_chamber",
   "input": [
     {
-      "item": "minecraft:redstone_block"
+      "id": "minecraft:redstone_block"
     },
     {
       "item": "minecraft:redstone_block"
@@ -34,7 +34,7 @@
   ],
   "inputFluid": {
     "amount": 1500,
-    "id": "industrialforegoing:latex"
+    "fluid": "industrialforegoing:latex"
   },
   "output": {
     "count": 1,

@@ -34,7 +34,7 @@
   ],
   "inputFluid": {
     "amount": 100,
-    "id": "industrialforegoingadditional:darkest_void"
+    "fluid": "industrialforegoingadditional:darkest_void"
   },
   "output": {
     "count": 1,
