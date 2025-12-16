@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
             event.accept(ModItems.POLISHED_DIAMOND);
             event.accept(ModItems.POLISHED_EMERALD);
             event.accept(ModItems.POLISHED_AMETHYST);
+            event.accept(ModItems.PLASTIC_ELYTRA);
         }
     }
 
