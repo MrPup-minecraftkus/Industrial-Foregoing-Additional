@@ -1,9 +1,9 @@
 package net.mrpup.industrialforegoingadditional.block.core.tile;
 
+import net.mrpup.industrialforegoingadditional.config.machine.PolishingMachineConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.recipe.PolishingMachineRecipe;
 import com.buuz135.industrial.block.tile.IndustrialProcessingTile;
-import com.buuz135.industrial.config.machine.core.DissolutionChamberConfig;
 import com.hrznstudio.titanium.annotation.Save;
 import com.hrznstudio.titanium.component.energy.EnergyStorageComponent;
 import com.hrznstudio.titanium.component.fluid.SidedFluidTankComponent;
@@ -45,12 +45,12 @@ public class PolishingMachineTile extends IndustrialProcessingTile<PolishingMach
 
         this.addInventory(this.inputFirst = (SidedInventoryComponent)(new SidedInventoryComponent("inputFirst", 57, 30, 1, 0)).setColor(DyeColor.BLUE).setSlotLimit(64).setOutputFilter((stack, integer) -> false).setOnSlotChanged((stack, integer) -> this.checkForRecipe()).setComponentHarness(this));
         this.addInventory(this.inputSecond = (SidedInventoryComponent)(new SidedInventoryComponent("inputSecond", 57, 54, 1, 1)).setColor(DyeColor.MAGENTA).setSlotLimit(1).setOutputFilter((stack, integer) -> false).setOnSlotChanged((stack, integer) -> this.checkForRecipe()).setComponentHarness(this));
-        this.addTank(this.inputFluid1 = (SidedFluidTankComponent)(new SidedFluidTankComponent("input_fluid", DissolutionChamberConfig.maxInputTankSize, 57 + slotSpacing, 18 + slotSpacing, 2)).setColor(DyeColor.LIME).setTankType(Type.SMALL).setComponentHarness(this).setOnContentChange(() -> this.checkForRecipe()));
+        this.addTank(this.inputFluid1 = (SidedFluidTankComponent)(new SidedFluidTankComponent("input_fluid", PolishingMachineConfig.maxInputTankSize, 57 + slotSpacing, 18 + slotSpacing, 2)).setColor(DyeColor.LIME).setTankType(Type.SMALL).setComponentHarness(this).setOnContentChange(() -> this.checkForRecipe()));
         this.addInventory(this.output = (SidedInventoryComponent)(new SidedInventoryComponent("output", 129, 22, 3, 3)).setColor(DyeColor.ORANGE).setRange(1, 3).setInputFilter((stack, integer) -> false).setComponentHarness(this));
-        this.addTank(this.outputFluid = (SidedFluidTankComponent)(new SidedFluidTankComponent("output_fluid", DissolutionChamberConfig.maxOutputTankSize, 149, 20, 4)).setColor(DyeColor.MAGENTA).setComponentHarness(this).setTankAction(Action.DRAIN));
+        this.addTank(this.outputFluid = (SidedFluidTankComponent)(new SidedFluidTankComponent("output_fluid", PolishingMachineConfig.maxOutputTankSize, 149, 20, 4)).setColor(DyeColor.MAGENTA).setComponentHarness(this).setTankAction(Action.DRAIN));
 
-        this.maxProgress = DissolutionChamberConfig.maxProgress;
-        this.powerPerTick = DissolutionChamberConfig.powerPerTick;
+        this.maxProgress = PolishingMachineConfig.maxProgress;
+        this.powerPerTick = PolishingMachineConfig.powerPerTick;
     }
 
     private void checkForRecipe() {
@@ -119,7 +119,7 @@ public class PolishingMachineTile extends IndustrialProcessingTile<PolishingMach
     }
 
     protected EnergyStorageComponent<PolishingMachineTile> createEnergyStorage() {
-        return new EnergyStorageComponent<>(DissolutionChamberConfig.maxStoredPower, 10, 20);
+        return new EnergyStorageComponent<>(PolishingMachineConfig.maxStoredPower, 10, 20);
     }
 
     protected int getTickPower() {

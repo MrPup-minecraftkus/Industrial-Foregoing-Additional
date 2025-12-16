@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialforegoingadditional:efficiency_addon_tier_3"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "minecraft:end_rod"
+    },
+    {
+      "item": "minecraft:elytra"
+    },
+    {
+      "item": "minecraft:elytra"
+    },
+    {
+      "item": "minecraft:end_rod"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "minecraft:end_stone"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1500,
+    "fluid": "industrialforegoing:latex"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialforegoingadditional:plastic_elytra"
+  },
+  "processingTime": 250
+}

@@ -8,7 +8,7 @@
   "type": "industrialforegoing:dissolution_chamber",
   "input": [
     {
-      "id": "minecraft:redstone_block"
+      "item": "minecraft:redstone_block"
     },
     {
       "item": "minecraft:redstone_block"

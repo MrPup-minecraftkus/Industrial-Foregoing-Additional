@@ -1,8 +1,6 @@
 package net.mrpup.industrialforegoingadditional.block.core.tile;
 
 import com.buuz135.industrial.block.tile.IndustrialProcessingTile;
-import com.buuz135.industrial.config.machine.core.DissolutionChamberConfig;
-import com.buuz135.industrial.config.machine.misc.EnchantmentApplicatorConfig;
 import com.hrznstudio.titanium.annotation.Save;
 import com.hrznstudio.titanium.component.energy.EnergyStorageComponent;
 import com.hrznstudio.titanium.component.fluid.SidedFluidTankComponent;
@@ -13,6 +11,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.mrpup.industrialforegoingadditional.config.machine.SolidifierConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.recipe.SolidifierRecipe;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
@@ -22,8 +21,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class SolidifierTile extends IndustrialProcessingTile<SolidifierTile> {
-    private int maxProgress;
-    private int powerPerTick;
 
     @Save
     private SidedInventoryComponent<SolidifierTile> input;
@@ -40,10 +37,8 @@ public class SolidifierTile extends IndustrialProcessingTile<SolidifierTile> {
         int slotSpacing = 22;
 
         this.addInventory(this.input = (SidedInventoryComponent)(new SidedInventoryComponent("input", 74, 40, 1, 1)).setColor(DyeColor.BLUE).setSlotLimit(64).setOutputFilter((stack, integer) -> false).setOnSlotChanged((stack, integer) -> this.checkForRecipe()).setComponentHarness(this));
-        this.addTank(this.inputFluid = (SidedFluidTankComponent)(new SidedFluidTankComponent("input_fluid", EnchantmentApplicatorConfig.tankSize, 34, 20, 0)).setColor(DyeColor.LIME).setComponentHarness(this).setOnContentChange(() -> this.checkForRecipe()));
+        this.addTank(this.inputFluid = (SidedFluidTankComponent)(new SidedFluidTankComponent("input_fluid", SolidifierConfig.tankSize, 34, 20, 0)).setColor(DyeColor.LIME).setComponentHarness(this).setOnContentChange(() -> this.checkForRecipe()));
         this.addInventory(this.output = (SidedInventoryComponent)(new SidedInventoryComponent("output", 148, 22, 3, 2)).setColor(DyeColor.ORANGE).setRange(1, 3).setInputFilter((stack, integer) -> false).setComponentHarness(this));
-        this.maxProgress = DissolutionChamberConfig.maxProgress;
-        this.powerPerTick = DissolutionChamberConfig.powerPerTick;
     }
 
     private void checkForRecipe() {
@@ -101,15 +96,15 @@ public class SolidifierTile extends IndustrialProcessingTile<SolidifierTile> {
     }
 
     protected EnergyStorageComponent<SolidifierTile> createEnergyStorage() {
-        return new EnergyStorageComponent<>(DissolutionChamberConfig.maxStoredPower, 10, 20);
+        return new EnergyStorageComponent<>(SolidifierConfig.maxStoredPower, 10, 20);
     }
 
     protected int getTickPower() {
-        return this.powerPerTick;
+        return SolidifierConfig.powerPerTick;
     }
 
     public int getMaxProgress() {
-        return this.currentRecipe != null ? this.currentRecipe.processingTime : this.maxProgress;
+        return this.currentRecipe != null ? this.currentRecipe.processingTime : SolidifierConfig.maxProgress;
     }
 
     @Nonnull

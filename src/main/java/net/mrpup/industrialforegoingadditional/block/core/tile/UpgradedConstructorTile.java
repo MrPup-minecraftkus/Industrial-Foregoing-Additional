@@ -1,9 +1,9 @@
 package net.mrpup.industrialforegoingadditional.block.core.tile;
 
+import net.mrpup.industrialforegoingadditional.config.machine.UpgradedConstructorConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.recipe.UpgradedConstructorRecipe;
 import com.buuz135.industrial.block.tile.IndustrialProcessingTile;
-import com.buuz135.industrial.config.machine.core.DissolutionChamberConfig;
 import com.hrznstudio.titanium.annotation.Save;
 import com.hrznstudio.titanium.component.bundle.LockableInventoryBundle;
 import com.hrznstudio.titanium.component.energy.EnergyStorageComponent;
@@ -27,6 +27,7 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class UpgradedConstructorTile extends IndustrialProcessingTile<UpgradedConstructorTile> {
+
     private int maxProgress;
     private int powerPerTick;
     @Save
@@ -45,12 +46,12 @@ public class UpgradedConstructorTile extends IndustrialProcessingTile<UpgradedCo
         int slotSpacing = 22;
 
         this.addBundle(this.input = new LockableInventoryBundle(this, (new SidedInventoryComponent("input", 34, 19, 4, 0)).setColor(DyeColor.LIGHT_BLUE).setSlotPosition((integer) -> getSlotPos((Integer) integer)).setSlotLimit(1).setOutputFilter((stack, integer) -> false).setComponentHarness(this).setInputFilter((stack, integer) -> !this.canIncrease()).setOnSlotChanged((stack, integer) -> this.checkForRecipe()), 100, 64, false));
-        this.addTank(this.inputFluid1 = (SidedFluidTankComponent)(new SidedFluidTankComponent("input_fluid", DissolutionChamberConfig.maxInputTankSize, 33 + slotSpacing, 18 + slotSpacing, 1)).setColor(DyeColor.LIME).setTankType(Type.SMALL).setComponentHarness(this).setOnContentChange(() -> this.checkForRecipe()));
+        this.addTank(this.inputFluid1 = (SidedFluidTankComponent)(new SidedFluidTankComponent("input_fluid", UpgradedConstructorConfig.maxInputTankSize, 33 + slotSpacing, 18 + slotSpacing, 1)).setColor(DyeColor.LIME).setTankType(Type.SMALL).setComponentHarness(this).setOnContentChange(() -> this.checkForRecipe()));
         this.addInventory(this.output = (SidedInventoryComponent)(new SidedInventoryComponent("output", 129, 22, 3, 2)).setColor(DyeColor.ORANGE).setRange(1, 3).setInputFilter((stack, integer) -> false).setComponentHarness(this));
-        this.addTank(this.outputFluid = (SidedFluidTankComponent)(new SidedFluidTankComponent("output_fluid", DissolutionChamberConfig.maxOutputTankSize, 149, 20, 3)).setColor(DyeColor.MAGENTA).setComponentHarness(this).setTankAction(Action.DRAIN));
+        this.addTank(this.outputFluid = (SidedFluidTankComponent)(new SidedFluidTankComponent("output_fluid", UpgradedConstructorConfig.maxOutputTankSize, 149, 20, 3)).setColor(DyeColor.MAGENTA).setComponentHarness(this).setTankAction(Action.DRAIN));
 
-        this.maxProgress = DissolutionChamberConfig.maxProgress;
-        this.powerPerTick = DissolutionChamberConfig.powerPerTick;
+        this.maxProgress = UpgradedConstructorConfig.maxProgress;
+        this.powerPerTick = UpgradedConstructorConfig.powerPerTick;
     }
 
     private void checkForRecipe() {
@@ -114,7 +115,7 @@ public class UpgradedConstructorTile extends IndustrialProcessingTile<UpgradedCo
     }
 
     protected EnergyStorageComponent<UpgradedConstructorTile> createEnergyStorage() {
-        return new EnergyStorageComponent<>(DissolutionChamberConfig.maxStoredPower, 10, 20);
+        return new EnergyStorageComponent<>(UpgradedConstructorConfig.maxStoredPower, 10, 20);
     }
 
     protected int getTickPower() {
