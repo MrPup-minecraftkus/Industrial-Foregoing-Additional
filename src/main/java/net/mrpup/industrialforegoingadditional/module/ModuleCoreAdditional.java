@@ -1,6 +1,8 @@
 package net.mrpup.industrialforegoingadditional.module;
 
+import com.buuz135.industrial.IndustrialForegoing;
 import com.buuz135.industrial.block.IndustrialBlockItem;
+import com.buuz135.industrial.block.resourceproduction.BlockBreakerBlock;
 import com.hrznstudio.titanium.module.BlockWithTile;
 import com.hrznstudio.titanium.module.DeferredRegistryHelper;
 import com.hrznstudio.titanium.recipe.serializer.CodecRecipeSerializer;
@@ -10,7 +12,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
+import net.mrpup.industrialforegoingadditional.IndustrialForegoingAdditional;
 import net.mrpup.industrialforegoingadditional.block.core.*;
+import net.mrpup.industrialforegoingadditional.block.other.BlockDetectorBlock;
 import net.mrpup.industrialforegoingadditional.recipe.FactoryConstructorRecipe;
 import net.mrpup.industrialforegoingadditional.recipe.PolishingMachineRecipe;
 import net.mrpup.industrialforegoingadditional.recipe.SolidifierRecipe;
@@ -38,6 +42,8 @@ public class ModuleCoreAdditional implements IModuleAdditional  {
     public static BlockWithTile REPAIR_MACHINE;
     public static DeferredHolder<RecipeType<?>, RecipeType<?>> REPAIR_MACHINE_TYPE;
 
+    public static BlockWithTile BLOCK_DETECTOR;
+
     public static TitaniumTab TAB_CORE = new TitaniumTab(ResourceLocation.fromNamespaceAndPath("industrialforegoingadditional", "core"));
 
     public void generateFeatures(DeferredRegistryHelper helper) {
@@ -60,5 +66,8 @@ public class ModuleCoreAdditional implements IModuleAdditional  {
         SOLIDIFIER = helper.registerBlockWithTileItem("solidifier", SolidifierBlock::new, (blockRegistryObject) -> () -> new IndustrialBlockItem((Block)blockRegistryObject.get(), TAB_CORE), TAB_CORE);
         SOLIDIFIER_SERIALIZER = helper.registerGeneric(Registries.RECIPE_SERIALIZER, "solidifier", () -> new CodecRecipeSerializer(SolidifierRecipe.class, SOLIDIFIER_TYPE, SolidifierRecipe.CODEC));
         SOLIDIFIER_TYPE = helper.registerGeneric(Registries.RECIPE_TYPE, "solidifier", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath("industrialforegoingadditional", "solidifier")));
+
+        BLOCK_DETECTOR = IndustrialForegoingAdditional.INSTANCE.getRegistries().registerBlockWithTileItem("block_detector", () -> new BlockDetectorBlock(), (blockRegistryObject) -> () -> new IndustrialBlockItem((Block)blockRegistryObject.get(), TAB_CORE), TAB_CORE);
+
     }
 }

@@ -17,5 +17,6 @@
   "block.industrialforegoingadditional.polishing_machine": "Polishing Machine",
   "block.industrialforegoingadditional.upgraded_constructor": "Upgraded Constructor",
   "block.industrialforegoingadditional.repair_machine": "Repair Machine",
-  "block.industrialforegoingadditional.solidifier": "Solidifier"
+  "block.industrialforegoingadditional.solidifier": "Solidifier",
+  "block.industrialforegoingadditional.block_detector": "Block Detector"
 }

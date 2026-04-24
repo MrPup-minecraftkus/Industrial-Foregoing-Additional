@@ -1,0 +1,9 @@
+{
+  "parent": "industrialforegoing:block/base_block",
+  "textures": {
+    "south": "industrialforegoingadditional:block/machine/block_detector_back",
+    "west": "industrialforegoingadditional:block/machine/block_detector_side",
+    "east": "industrialforegoingadditional:block/machine/block_detector_side",
+    "north": "industrialforegoingadditional:block/machine/block_detector_side"
+  }
+}

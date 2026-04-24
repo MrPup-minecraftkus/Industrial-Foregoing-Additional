@@ -119,7 +119,7 @@ configurations {
 }
 
 dependencies {
-    implementation "curse.maven:industrial-foregoing-266515:6502376"
+    implementation "curse.maven:industrial-foregoing-266515:7600395"
     implementation "curse.maven:titanium-287342:5865916"
     implementation "curse.maven:jei-238222:5846880"
 }
