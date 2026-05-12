@@ -10,7 +10,7 @@ public class PlasticElytraConfig {
     @ConfigVal(
             comment = "Max Speed - Default: [3], Classic Elytra = 1"
     )
-    public static int MaxSpeed = 3;
+    public static int MaxSpeed = 2;
     @ConfigVal(
             comment = "Max Durability - Default: [1200]"
     )

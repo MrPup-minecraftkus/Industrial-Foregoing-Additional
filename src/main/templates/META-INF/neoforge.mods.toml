@@ -7,7 +7,7 @@ config = "industrialforegoingadditional.mixins.json"
 
 [[mods]]
 modId="industrialforegoingadditional"
-version="1.2.0"
+version="1.2.1"
 displayName="Industrial Foregoing Additional"
 authors="MrPup(minecraftkus)"
 description='''Automate Everything(but more!)'''
