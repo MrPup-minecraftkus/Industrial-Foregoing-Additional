@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(LivingEntity.class)
 public abstract class ElytraSpeedMixin {
 
-    @Inject(method = "travel", at = @At("TAIL"), remap = false)
+    @Inject(method = "travel", at = @At("TAIL"))
     private void applyElytraSpeedBoost(Vec3 travelVector, CallbackInfo ci) {
         LivingEntity entity = (LivingEntity) (Object) this;
 

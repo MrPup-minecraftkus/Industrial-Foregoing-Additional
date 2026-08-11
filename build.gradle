@@ -123,11 +123,6 @@ repositories {
 }
 
 dependencies {
-    // Specify the version of Minecraft to use.
-    // Any artifact can be supplied so long as it has a "userdev" classifier artifact and is a compatible patcher artifact.
-    // The "userdev" classifier will be requested and setup by ForgeGradle.
-    // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
-    // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation fg.deobf("curse.maven:industrial-foregoing-266515:7949862")
@@ -170,7 +165,8 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
-                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs"            : "industrialforegoingadditional.mixins.json"
         ])
     }
 
@@ -198,8 +194,8 @@ publishing {
 }
 
 mixin {
-    add sourceSets.main, 'mixins.industrialforegoingadditional.refmap.json'
-    config 'mixins.industrialforegoingadditional.json'
+    add sourceSets.main, 'industrialforegoingadditional.mixins.refmap.json'
+    config 'industrialforegoingadditional.mixins.json'
 }
 
 tasks.withType(JavaCompile).configureEach {
