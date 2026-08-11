@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "industrialforegoingadditional:block/block_detector" },
+    "facing=south": { "model": "industrialforegoingadditional:block/block_detector", "y": 180 },
+    "facing=east":  { "model": "industrialforegoingadditional:block/block_detector", "y": 90 },
+    "facing=west":  { "model": "industrialforegoingadditional:block/block_detector", "y": 270 },
+    "facing=up":    { "model": "industrialforegoingadditional:block/block_detector", "x": 270 },
+    "facing=down":  { "model": "industrialforegoingadditional:block/block_detector", "x": 90 }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "industrialforegoingadditional:factory_constructor",
+  "input": [
+    { "item": "industrialforegoingadditional:netherite_gear" },
+    { "item": "industrialforegoingadditional:machine_frame_ultimate" },
+    { "item": "industrialforegoing:laser_lens0" },
+    { "item": "industrialforegoing:laser_lens15" },
+    { "item": "industrialforegoing:laser_drill" },
+    { "item": "industrialforegoingadditional:netherite_gear" }
+  ],
+  "inputFluid1": "{Amount:250,FluidName:\"industrialforegoing:ether_gas\"}",
+  "inputFluid2": "{Amount:250,FluidName:\"industrialforegoingadditional:darkest_void\"}",
+  "processingTime": 200,
+  "output": {
+    "item": "industrialforegoingadditional:polishing_machine",
+    "count": 1
+  }
+}
+

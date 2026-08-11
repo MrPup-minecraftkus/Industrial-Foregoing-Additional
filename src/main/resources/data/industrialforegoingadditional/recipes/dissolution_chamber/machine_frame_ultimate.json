@@ -1,0 +1,35 @@
+{
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "industrialforegoing:plastic"
+    },
+    {
+      "item": "industrialforegoing:machine_frame_supreme"
+    },
+    {
+      "item": "industrialforegoing:plastic"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "industrialforegoingadditional:netherite_gear"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    }
+  ],
+  "inputFluid": "{Amount:100,FluidName:\"industrialforegoing:darkest_void\"}",
+  "output": {
+    "count": 1,
+    "item": "industrialforegoingadditional:machine_frame_ultimate"
+  },
+  "processingTime": 500
+}

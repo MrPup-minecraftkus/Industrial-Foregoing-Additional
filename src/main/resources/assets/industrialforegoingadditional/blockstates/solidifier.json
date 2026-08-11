@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "subfacing=east": {
+      "model": "industrialforegoingadditional:block/solidifier",
+      "y": 90
+    },
+    "subfacing=north": {
+      "model": "industrialforegoingadditional:block/solidifier"
+    },
+    "subfacing=south": {
+      "model": "industrialforegoingadditional:block/solidifier",
+      "y": 180
+    },
+    "subfacing=west": {
+      "model": "industrialforegoingadditional:block/solidifier",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "industrialforegoingadditional:solidifier",
+  "input": [
+    { "item": "minecraft:snowball" }
+  ],
+  "inputFluid": "{Amount:500,FluidName:\"minecraft:water\"}",
+  "processingTime": 200,
+  "output": {
+    "item": "minecraft:snow_block",
+    "count": 1
+  }
+}
+

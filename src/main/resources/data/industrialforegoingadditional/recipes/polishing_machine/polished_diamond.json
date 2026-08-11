@@ -1,0 +1,17 @@
+{
+  "type": "industrialforegoingadditional:polishing_machine",
+  "inputFirst": [
+    { "item": "minecraft:diamond" }
+  ],
+  "inputSecond": [
+    { "item": "industrialforegoing:laser_lens0" }
+  ],
+  "inputFluid1": "{Amount:1000,FluidName:\"minecraft:water\"}",
+  "processingTime": 200,
+  "output": {
+    "item": "industrialforegoingadditional:polished_diamond",
+    "count": 1
+  },
+  "outputFluid": "{Amount:0,FluidName:\"industrialforegoingadditional:darkest_void\"}"
+}
+

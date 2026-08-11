@@ -1,0 +1,11 @@
+{
+  "type": "industrialforegoingadditional:solidifier",
+  "input": [],
+  "inputFluid": "{Amount:100,FluidName:\"industrialforegoingadditional:darkest_void\"}",
+  "processingTime": 200,
+  "output": {
+    "item": "minecraft:echo_shard",
+    "count": 1
+  }
+}
+

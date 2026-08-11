@@ -1,0 +1,35 @@
+{
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoing:diamond_gear"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoing:plastic"
+    },
+    {
+      "item": "industrialforegoing:plastic"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "industrialforegoing:diamond_gear"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "inputFluid": "{Amount:250,FluidName:\"industrialforegoing:latex\"}",
+  "output": {
+    "count": 2,
+    "item": "industrialforegoingadditional:netherite_gear"
+  },
+  "processingTime": 1000
+}

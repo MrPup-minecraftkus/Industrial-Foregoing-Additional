@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "subfacing=east": {
+      "model": "industrialforegoingadditional:block/polishing_machine",
+      "y": 90
+    },
+    "subfacing=north": {
+      "model": "industrialforegoingadditional:block/polishing_machine"
+    },
+    "subfacing=south": {
+      "model": "industrialforegoingadditional:block/polishing_machine",
+      "y": 180
+    },
+    "subfacing=west": {
+      "model": "industrialforegoingadditional:block/polishing_machine",
+      "y": 270
+    }
+  }
+}

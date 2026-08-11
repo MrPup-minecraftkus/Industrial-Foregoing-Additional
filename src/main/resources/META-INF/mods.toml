@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="MIT License"
+
+[[mixins]]
+config = "industrialforegoingadditional.mixins.json"
+
+[[mods]]
+modId="industrialforegoingadditional"
+displayName="Industrial Foregoing Additional"
+authors="MrPup(minecraftkus)"
+description='''Automate Everything(but more!)'''
+
+[[dependencies.industrialforegoingadditional]]
+modId="forge"
+mandatory=true
+versionRange = "[47.0.19,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.industrialforegoingadditional]]
+modId = "titanium"
+mandatory = true
+versionRange = "[3.8.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.industrialforegoingadditional]]
+modId = "industrialforegoing"
+mandatory = true
+versionRange = "[1.20-3.5.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.industrialforegoingadditional]]
+modId = "jei"
+mandatory = false
+versionRange = "[9.7.0,)"
+ordering = "NONE"
+side = "BOTH"

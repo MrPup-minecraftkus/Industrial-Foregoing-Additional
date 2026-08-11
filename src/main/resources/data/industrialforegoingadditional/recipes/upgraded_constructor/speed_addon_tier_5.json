@@ -1,0 +1,17 @@
+{
+  "type": "industrialforegoingadditional:upgraded_constructor",
+  "input": [
+    { "item": "industrialforegoingadditional:speed_addon_tier_4" },
+    { "item": "industrialforegoingadditional:polished_amethyst_shard" },
+    { "item": "industrialforegoingadditional:polished_amethyst_shard" },
+    { "item": "industrialforegoingadditional:polished_amethyst_shard" }
+  ],
+  "inputFluid1": "{Amount:250,FluidName:\"industrialforegoingadditional:darkest_void\"}",
+  "processingTime": 200,
+  "output": {
+    "item": "industrialforegoingadditional:speed_addon_tier_5",
+    "count": 1
+  },
+  "outputFluid": "{Amount:0,FluidName:\"industrialforegoingadditional:darkest_void\"}"
+}
+

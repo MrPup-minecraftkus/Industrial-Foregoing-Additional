@@ -1,0 +1,25 @@
+{
+  "item.industrialforegoingadditional.netherite_gear": "Netherite Gear",
+  "item.industrialforegoingadditional.polished_diamond": "Polished Diamond",
+  "item.industrialforegoingadditional.polished_emerald": "Polished Emerald",
+  "item.industrialforegoingadditional.polished_amethyst_shard": "Polished Amethyst Shard",
+  "item.industrialforegoingadditional.plastic_elytra": "Plastic Elytra",
+
+  "itemGroup.industrialforegoingadditional_core": "Industrial Foregoing Additional: Core",
+  "itemGroup.industrialforegoingadditional_survival": "Industrial Foregoing Additional: Survival",
+
+  "item.industrialforegoingadditional.darkest_void_bucket": "Darkest Void Bucket",
+  "item.industrialforegoingadditional.dirty_mineral_water_bucket": "Dirty Mineral Water Bucket",
+
+  "fluid_type.industrialforegoingadditional.darkest_void": "Darkest Void",
+  "fluid_type.industrialforegoingadditional.dirty_mineral_water": "Dirty Mineral Water",
+
+  "block.industrialforegoingadditional.machine_frame_ultimate": "Ultimate Machine Frame",
+  "block.industrialforegoingadditional.factory_constructor": "Factory Constructor",
+  "block.industrialforegoingadditional.polishing_machine": "Polishing Machine",
+  "block.industrialforegoingadditional.upgraded_constructor": "Upgraded Constructor",
+  "block.industrialforegoingadditional.repair_machine": "Repair Machine",
+  "block.industrialforegoingadditional.solidifier": "Solidifier",
+  "block.industrialforegoingadditional.sifter_machine": "Sifter Machine",
+  "block.industrialforegoingadditional.block_detector": "Block Detector"
+}

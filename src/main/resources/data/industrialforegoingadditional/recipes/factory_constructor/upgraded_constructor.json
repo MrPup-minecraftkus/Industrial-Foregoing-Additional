@@ -1,0 +1,18 @@
+{
+  "type": "industrialforegoingadditional:factory_constructor",
+  "input": [
+    { "item": "industrialforegoingadditional:netherite_gear" },
+    { "item": "industrialforegoingadditional:machine_frame_ultimate" },
+    { "item": "industrialforegoingadditional:efficiency_addon_tier_4" },
+    { "item": "industrialforegoingadditional:processing_addon_tier_4" },
+    { "item": "industrialforegoing:dissolution_chamber" },
+    { "item": "industrialforegoingadditional:netherite_gear" }
+  ],
+  "inputFluid1": "{Amount:250,FluidName:\"industrialforegoing:ether_gas\"}",
+  "inputFluid2": "{Amount:250,FluidName:\"industrialforegoingadditional:darkest_void\"}",
+  "processingTime": 200,
+  "output": {
+    "item": "industrialforegoingadditional:upgraded_constructor",
+    "count": 1
+  }
+}
