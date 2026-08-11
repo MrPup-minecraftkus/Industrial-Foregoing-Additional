@@ -1,12 +1,13 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
-license="MIT License"
+license="MIT"
 
 [[mixins]]
 config = "industrialforegoingadditional.mixins.json"
 
 [[mods]]
 modId="industrialforegoingadditional"
+version="${mod_version}"
 displayName="Industrial Foregoing Additional"
 authors="MrPup(minecraftkus)"
 description='''Automate Everything(but more!)'''
