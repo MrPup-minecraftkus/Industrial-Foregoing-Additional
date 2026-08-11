@@ -1,8 +1,8 @@
 package net.mrpup.industrialforegoingadditional.block.core.tile;
 
-import net.mrpup.industrialforegoingadditional.config.machine.PolishingMachineConfig;
+import net.mrpup.industrialforegoingadditional.config.machine.core.PolishingMachineConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
-import net.mrpup.industrialforegoingadditional.recipe.PolishingMachineRecipe;
+import net.mrpup.industrialforegoingadditional.recipe.core.PolishingMachineRecipe;
 import com.buuz135.industrial.block.tile.IndustrialProcessingTile;
 import com.hrznstudio.titanium.annotation.Save;
 import com.hrznstudio.titanium.component.energy.EnergyStorageComponent;

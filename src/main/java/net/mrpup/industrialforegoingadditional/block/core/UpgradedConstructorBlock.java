@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
 
 public class UpgradedConstructorBlock extends IndustrialBlock<UpgradedConstructorTile> {
     public UpgradedConstructorBlock() {
-        super("upgraded_constructor", Properties.ofFullCopy(Blocks.IRON_BLOCK), UpgradedConstructorTile.class, ModuleCoreAdditional.TAB_CORE);
+        super("upgraded_constructor", Properties.ofFullCopy(Blocks.IRON_BLOCK), UpgradedConstructorTile.class, ModuleCoreAdditional.TAB_CORE_ADDITIONAL);
     }
 
     public BlockEntityType.BlockEntitySupplier<UpgradedConstructorTile> getTileEntityFactory() {

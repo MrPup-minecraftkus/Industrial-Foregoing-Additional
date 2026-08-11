@@ -4,8 +4,6 @@ import com.buuz135.industrial.module.ModuleCore;
 import com.buuz135.industrial.recipe.*;
 import com.buuz135.industrial.recipe.data.EntityData;
 import com.buuz135.industrial.utils.IndustrialTags;
-import com.hrznstudio.titanium.recipe.generator.TitaniumShapedRecipeBuilder;
-import com.hrznstudio.titanium.util.TagUtil;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementRequirements;
 import net.minecraft.advancements.AdvancementRewards;
@@ -19,7 +17,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluid;
 import net.mrpup.industrialforegoingadditional.block.ModBlocks;
-import net.mrpup.industrialforegoingadditional.fluid.ModFluids;
 import net.mrpup.industrialforegoingadditional.item.ModItems;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.neoforged.neoforge.common.conditions.ICondition;
@@ -33,10 +30,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class IndustrialSerializableProvideAdditional {
+
     public static void init(RecipeOutput output) {
 
         //darkest_void
-        createRecipeLaserDrillFluid(output, "darkest_void", "minecraft", new LaserDrillFluidRecipe(new SizedFluidIngredient(FluidIngredient.of(new Fluid[]{(Fluid)ModFluids.SOURCE_DARKEST_VOID.get()}), 5), 10, Optional.of(EntityData.of(EntityType.WARDEN)), new LaserDrillRarity[]{new LaserDrillRarity(new LaserDrillRarity.BiomeRarity(new ArrayList(), new ArrayList()), new LaserDrillRarity.DimensionRarity(new ArrayList(), new ArrayList()), -64, 256, 8)}));
+        createRecipeLaserDrillFluid(output, "darkest_void", "minecraft", new LaserDrillFluidRecipe(new SizedFluidIngredient(FluidIngredient.of(new Fluid[]{(Fluid)ModuleCoreAdditional.DARKEST_VOID.getSourceFluid().get()}), 5), 15, Optional.of(EntityData.of(EntityType.WARDEN)), new LaserDrillRarity[]{new LaserDrillRarity(new LaserDrillRarity.BiomeRarity(new ArrayList(), new ArrayList()), new LaserDrillRarity.DimensionRarity(new ArrayList(), new ArrayList()), -64, 256, 8)}));
 
         // factory_constructor
         DissolutionChamberRecipe.createRecipe(output, "factory_constructor", new DissolutionChamberRecipe(
@@ -50,7 +48,7 @@ public class IndustrialSerializableProvideAdditional {
                         Ingredient.of(ModItems.NETHERITE_GEAR.get()),
                         Ingredient.of(Items.ECHO_SHARD)
                 ),
-                new FluidStack(ModFluids.SOURCE_DARKEST_VOID.get(), 250),
+                new FluidStack(ModuleCoreAdditional.DARKEST_VOID.getSourceFluid(), 250),
                 1000,
                 Optional.of(new ItemStack(ModuleCoreAdditional.FACTORY_CONSTRUCTOR)),
                 Optional.empty()
@@ -68,7 +66,7 @@ public class IndustrialSerializableProvideAdditional {
                         Ingredient.of(ModItems.NETHERITE_GEAR.get()),
                         Ingredient.of(Items.ECHO_SHARD)
                 ),
-                new FluidStack(ModFluids.SOURCE_DARKEST_VOID.get(), 100),
+                new FluidStack(ModuleCoreAdditional.DARKEST_VOID.getSourceFluid(), 100),
                 500,
                 Optional.of(new ItemStack(ModBlocks.ULTIMATE_MACHINE_FRAME.get())),
                 Optional.empty()

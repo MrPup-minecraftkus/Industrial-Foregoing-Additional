@@ -1,6 +1,5 @@
 package net.mrpup.industrialforegoingadditional.plugin.jei.category;
 
-import com.buuz135.industrial.config.machine.core.DissolutionChamberConfig;
 import com.hrznstudio.titanium.api.client.AssetTypes;
 import com.hrznstudio.titanium.client.screen.addon.EnergyBarScreenAddon;
 import com.hrznstudio.titanium.client.screen.addon.SlotsScreenAddon;
@@ -22,9 +21,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.mrpup.industrialforegoingadditional.block.core.tile.UpgradedConstructorTile;
+import net.mrpup.industrialforegoingadditional.config.machine.core.UpgradedConstructorConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.plugin.jei.IndustrialRecipeTypesAdditional;
-import net.mrpup.industrialforegoingadditional.recipe.UpgradedConstructorRecipe;
+import net.mrpup.industrialforegoingadditional.recipe.core.UpgradedConstructorRecipe;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.awt.*;
@@ -96,21 +96,16 @@ public class UpgradedConstructorCategory implements IRecipeCategory<UpgradedCons
 
     @Override
     public void draw(UpgradedConstructorRecipe recipe, IRecipeSlotsView view, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-        var screen = Minecraft.getInstance().screen;
-        var asset = DefaultAssetProvider.DEFAULT_PROVIDER;
-
-        EnergyBarScreenAddon.drawBackground(guiGraphics, screen, asset, 0, 12, 0, 0);
-        SlotsScreenAddon.drawAsset(guiGraphics, screen, asset, 24, 11, 0, 0, 4,
-                UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true,
-                i -> new Color(DyeColor.LIGHT_BLUE.getFireworkColor()), i -> true, 1);
+        EnergyBarScreenAddon.drawBackground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0);
+        SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 24, 11, 0, 0, 4, UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true, i -> new Color(DyeColor.LIGHT_BLUE.getFireworkColor()), i -> true, 1);
         SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 119, 16, 0, 0, 3, (integer) -> Pair.of(18 * (integer % 1), 18 * (integer / 1)), (integer) -> ItemStack.EMPTY, true, (integer) -> new Color(DyeColor.ORANGE.getFireworkColor()), (integer) -> true, 1);
 
-        AssetUtil.drawAsset(guiGraphics, screen, asset.getAsset(AssetTypes.TANK_SMALL), 45, 32);
-        AssetUtil.drawAsset(guiGraphics, screen, asset.getAsset(AssetTypes.TANK_NORMAL), 139, 14);
-        AssetUtil.drawAsset(guiGraphics, screen, asset.getAsset(AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 92, 33);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_SMALL), 45, 32);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL), 139, 14);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 92, 33);
 
-        int consumed = recipe.processingTime * DissolutionChamberConfig.powerPerTick;
-        EnergyBarScreenAddon.drawForeground(guiGraphics, screen, asset, 0, 12, 0, 0,
+        int consumed = recipe.processingTime * UpgradedConstructorConfig.powerPerTick;
+        EnergyBarScreenAddon.drawForeground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0,
                 consumed, Math.max(50000, consumed));
     }
 }

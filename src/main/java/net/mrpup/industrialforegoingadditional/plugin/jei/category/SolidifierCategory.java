@@ -25,8 +25,7 @@ import net.minecraft.world.item.ItemStack;
 import net.mrpup.industrialforegoingadditional.block.core.tile.UpgradedConstructorTile;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.plugin.jei.IndustrialRecipeTypesAdditional;
-import net.mrpup.industrialforegoingadditional.recipe.PolishingMachineRecipe;
-import net.mrpup.industrialforegoingadditional.recipe.SolidifierRecipe;
+import net.mrpup.industrialforegoingadditional.recipe.survival.SolidifierRecipe;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.awt.*;
@@ -89,20 +88,15 @@ public class SolidifierCategory implements IRecipeCategory<SolidifierRecipe> {
 
     @Override
     public void draw(SolidifierRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-        var screen = Minecraft.getInstance().screen;
-        var assets = DefaultAssetProvider.DEFAULT_PROVIDER;
-
-        EnergyBarScreenAddon.drawBackground(guiGraphics, screen, assets, 0, 12, 0, 0);
-        SlotsScreenAddon.drawAsset(guiGraphics, screen, assets, 28, 33, 0, 0, 1,
-                UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true,
-                i -> new Color(DyeColor.MAGENTA.getFireworkColor()), i -> true, 1);
+        EnergyBarScreenAddon.drawBackground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0);
+        SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 28, 33, 0, 0, 1, UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true, i -> new Color(DyeColor.MAGENTA.getFireworkColor()), i -> true, 1);
         SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 119, 16, 0, 0, 3, (integer) -> Pair.of(18 * (integer % 1), 18 * (integer / 1)), (integer) -> ItemStack.EMPTY, true, (integer) -> new Color(DyeColor.ORANGE.getFireworkColor()), (integer) -> true, 1);
 
-        AssetUtil.drawAsset(guiGraphics, screen, assets.getAsset(AssetTypes.TANK_NORMAL), 23, 12);
-        AssetUtil.drawAsset(guiGraphics, screen, IAssetProvider.getAsset(assets, AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 80, 33);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL), 23, 12);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, IAssetProvider.getAsset(DefaultAssetProvider.DEFAULT_PROVIDER, AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 80, 33);
 
         int consumed = recipe.processingTime * DissolutionChamberConfig.powerPerTick;
         double maxEnergy = Math.max(50000F, consumed);
-        EnergyBarScreenAddon.drawForeground(guiGraphics, screen, assets, 0, 12, 0, 0, consumed, maxEnergy);
+        EnergyBarScreenAddon.drawForeground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0, consumed, maxEnergy);
     }
 }

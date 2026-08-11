@@ -1,16 +1,17 @@
 modLoader="javafml"
 loaderVersion="4,"
-license="MIT License"
+license="MIT"
 
 [[mixins]]
 config = "industrialforegoingadditional.mixins.json"
 
 [[mods]]
-modId="industrialforegoingadditional"
-version="1.2.1"
+modId="${mod_id}"
+version="${mod_version}"
+logoFile="industrial_logo.png"
 displayName="Industrial Foregoing Additional"
-authors="MrPup(minecraftkus)"
-description='''Automate Everything(but more!)'''
+authors="${mod_authors}"
+description='''${mod_description}'''
 
 [[dependencies."industrialforegoingadditional"]]
 modId = "neoforge"

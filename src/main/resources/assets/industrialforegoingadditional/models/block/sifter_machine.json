@@ -1,0 +1,6 @@
+{
+  "parent": "industrialforegoingadditional:block/base_block",
+  "textures": {
+    "up": "industrialforegoingadditional:block/machine/sifter_machine_up"
+  }
+}

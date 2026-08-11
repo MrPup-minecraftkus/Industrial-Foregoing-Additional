@@ -4,12 +4,9 @@ package net.mrpup.industrialforegoingadditional.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.mrpup.industrialforegoingadditional.IndustrialForegoingAdditional;
-import net.mrpup.industrialforegoingadditional.fluid.ModFluids;
 import net.mrpup.industrialforegoingadditional.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -26,10 +23,6 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
-    public static final Supplier<LiquidBlock> DARKEST_VOID_BLOCK = registerBlock("darkest_void_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_DARKEST_VOID.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)));
-
 
     public static final DeferredBlock<Block> ULTIMATE_MACHINE_FRAME = registerBlock("machine_frame_ultimate",
             () -> new Block(BlockBehaviour.Properties.of().strength(6).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));

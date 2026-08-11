@@ -1,16 +1,12 @@
 package net.mrpup.industrialforegoingadditional;
 import com.hrznstudio.titanium.module.ModuleController;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.mrpup.industrialforegoingadditional.block.ModBlocks;
-import net.mrpup.industrialforegoingadditional.fluid.ModFluidTypes;
-import net.mrpup.industrialforegoingadditional.fluid.ModFluids;
 import net.mrpup.industrialforegoingadditional.item.ModCreativeModeTabs;
 import net.mrpup.industrialforegoingadditional.item.ModItems;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
@@ -22,7 +18,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.util.Lazy;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
@@ -43,22 +38,17 @@ public class IndustrialForegoingAdditional extends ModuleController  {
     public IndustrialForegoingAdditional(Dist dist, IEventBus modEventBus, ModContainer container)
     {
         super(container);
-        modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
-
-        ModFluids.register(modEventBus);
-        ModFluidTypes.register(modEventBus);
-
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+
+        BestCat();
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-
+    private void BestCat() {
+        LOGGER.debug("all cats are beautiful, my cat -> assets/industrialforegoingadditional/cat.png");
     }
-
 
     public void addDataProvider(GatherDataEvent event) {
         super.addDataProvider(event);
@@ -70,7 +60,8 @@ public class IndustrialForegoingAdditional extends ModuleController  {
     protected void initModules() {
         INSTANCE = this;
         (new ModuleCoreAdditional()).generateFeatures(this.getRegistries());
-        this.addCreativeTab("core", () -> new ItemStack(ModuleCoreAdditional.FACTORY_CONSTRUCTOR.getBlock()), "industrialforegoingadditional_core", ModuleCoreAdditional.TAB_CORE);
+        this.addCreativeTab("core", () -> new ItemStack(ModuleCoreAdditional.FACTORY_CONSTRUCTOR.getBlock()), "industrialforegoingadditional_core", ModuleCoreAdditional.TAB_CORE_ADDITIONAL);
+        this.addCreativeTab("survival", () -> new ItemStack(ModuleCoreAdditional.BLOCK_DETECTOR.getBlock()), "industrialforegoingadditional_survival", ModuleCoreAdditional.TAB_SURVIVAL);
 
     }
 
@@ -79,8 +70,7 @@ public class IndustrialForegoingAdditional extends ModuleController  {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_DARKEST_VOID.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_DARKEST_VOID.get(), RenderType.translucent());
+
         }
     }
 }

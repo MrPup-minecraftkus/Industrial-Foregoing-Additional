@@ -1,6 +1,5 @@
 package net.mrpup.industrialforegoingadditional.plugin.jei.category;
 
-import com.buuz135.industrial.config.machine.core.DissolutionChamberConfig;
 import com.hrznstudio.titanium.api.client.AssetTypes;
 import com.hrznstudio.titanium.client.screen.addon.EnergyBarScreenAddon;
 import com.hrznstudio.titanium.client.screen.addon.SlotsScreenAddon;
@@ -23,10 +22,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.mrpup.industrialforegoingadditional.block.core.tile.UpgradedConstructorTile;
+import net.mrpup.industrialforegoingadditional.config.machine.core.PolishingMachineConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.plugin.jei.IndustrialRecipeTypesAdditional;
-import net.mrpup.industrialforegoingadditional.recipe.PolishingMachineRecipe;
-import net.neoforged.neoforge.fluids.FluidStack;
+import net.mrpup.industrialforegoingadditional.recipe.core.PolishingMachineRecipe;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.awt.*;
@@ -100,24 +99,17 @@ public class PolishingMachineCategory implements IRecipeCategory<PolishingMachin
 
     @Override
     public void draw(PolishingMachineRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-        var screen = Minecraft.getInstance().screen;
-        var assets = DefaultAssetProvider.DEFAULT_PROVIDER;
-
-        EnergyBarScreenAddon.drawBackground(guiGraphics, screen, assets, 0, 12, 0, 0);
-        SlotsScreenAddon.drawAsset(guiGraphics, screen, assets, 28, 22, 0, 0, 1,
-                UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true,
-                i -> new Color(DyeColor.BLUE.getFireworkColor()), i -> true, 1);
-        SlotsScreenAddon.drawAsset(guiGraphics, screen, assets, 28, 45, 0, 0, 1,
-                UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true,
-                i -> new Color(DyeColor.MAGENTA.getFireworkColor()), i -> true, 1);
+        EnergyBarScreenAddon.drawBackground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0);
+        SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 28, 22, 0, 0, 1, UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true, i -> new Color(DyeColor.BLUE.getFireworkColor()), i -> true, 1);
+        SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 28, 45, 0, 0, 1, UpgradedConstructorTile::getSlotPos, i -> ItemStack.EMPTY, true, i -> new Color(DyeColor.MAGENTA.getFireworkColor()), i -> true, 1);
         SlotsScreenAddon.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 119, 16, 0, 0, 3, (integer) -> Pair.of(18 * (integer % 1), 18 * (integer / 1)), (integer) -> ItemStack.EMPTY, true, (integer) -> new Color(DyeColor.ORANGE.getFireworkColor()), (integer) -> true, 1);
 
-        AssetUtil.drawAsset(guiGraphics, screen, assets.getAsset(AssetTypes.TANK_SMALL), 70, 32);
-        AssetUtil.drawAsset(guiGraphics, screen, assets.getAsset(AssetTypes.TANK_NORMAL), 139, 14);
-        AssetUtil.drawAsset(guiGraphics, screen, IAssetProvider.getAsset(assets, AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 92, 33);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_SMALL), 70, 32);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL), 139, 14);
+        AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, IAssetProvider.getAsset(DefaultAssetProvider.DEFAULT_PROVIDER, AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 92, 33);
 
-        int consumed = recipe.processingTime * DissolutionChamberConfig.powerPerTick;
+        int consumed = recipe.processingTime * PolishingMachineConfig.powerPerTick;
         double maxEnergy = Math.max(50000F, consumed);
-        EnergyBarScreenAddon.drawForeground(guiGraphics, screen, assets, 0, 12, 0, 0, consumed, maxEnergy);
+        EnergyBarScreenAddon.drawForeground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0, consumed, maxEnergy);
     }
 }

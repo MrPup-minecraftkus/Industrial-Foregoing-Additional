@@ -10,7 +10,7 @@ import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 
 public class FactoryConstructorBlock extends IndustrialBlock<FactoryConstructorTile> {
     public FactoryConstructorBlock() {
-        super("factory_constructor", Properties.ofFullCopy(Blocks.IRON_BLOCK), FactoryConstructorTile.class, ModuleCoreAdditional.TAB_CORE);
+        super("factory_constructor", Properties.ofFullCopy(Blocks.IRON_BLOCK), FactoryConstructorTile.class, ModuleCoreAdditional.TAB_CORE_ADDITIONAL);
     }
 
     public BlockEntityType.BlockEntitySupplier<FactoryConstructorTile> getTileEntityFactory() {

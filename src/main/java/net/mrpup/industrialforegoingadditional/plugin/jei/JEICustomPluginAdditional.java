@@ -16,11 +16,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
-import net.mrpup.industrialforegoingadditional.plugin.jei.category.FactoryConstructorCategory;
-import net.mrpup.industrialforegoingadditional.plugin.jei.category.PolishingMachineCategory;
-import net.mrpup.industrialforegoingadditional.plugin.jei.category.SolidifierCategory;
-import net.mrpup.industrialforegoingadditional.plugin.jei.category.UpgradedConstructorCategory;
+import net.mrpup.industrialforegoingadditional.plugin.jei.category.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -32,6 +30,7 @@ public class JEICustomPluginAdditional implements IModPlugin {
     private UpgradedConstructorCategory upgradedConstructorJEICategory;
     private PolishingMachineCategory polishingMachineJEICategory;
     private SolidifierCategory solidifierJEICategory;
+    //private SifterMachineCategory sifterMachineJEICategory;
 
     public static void showUses(ItemStack stack) {
     }
@@ -87,14 +86,16 @@ public class JEICustomPluginAdditional implements IModPlugin {
         this.solidifierJEICategory = new SolidifierCategory(registry.getJeiHelpers().getGuiHelper());
         registry.addRecipeCategories(new IRecipeCategory[]{this.solidifierJEICategory});
 
-
+        //this.sifterMachineJEICategory = new SifterMachineCategory(registry.getJeiHelpers().getGuiHelper());
+        //registry.addRecipeCategories(new IRecipeCategory[]{this.sifterMachineJEICategory});
     }
 
     public void registerRecipes(IRecipeRegistration registration) {
-        registration.addRecipes(IndustrialRecipeTypesAdditional.FACTORY_CONSTRUCTOR, RecipeUtil.getRecipes(Minecraft.getInstance().level, (net.minecraft.world.item.crafting.RecipeType) ModuleCoreAdditional.FACTORY_CONSTRUCTOR_TYPE.get()));
-        registration.addRecipes(IndustrialRecipeTypesAdditional.UPGRADED_CONSTRUCTOR, RecipeUtil.getRecipes(Minecraft.getInstance().level, (net.minecraft.world.item.crafting.RecipeType) ModuleCoreAdditional.UPGRADED_CONSTRUCTOR_TYPE.get()));
-        registration.addRecipes(IndustrialRecipeTypesAdditional.POLISHING_MACHINE, RecipeUtil.getRecipes(Minecraft.getInstance().level, (net.minecraft.world.item.crafting.RecipeType) ModuleCoreAdditional.POLISHING_MACHINE_TYPE.get()));
-        registration.addRecipes(IndustrialRecipeTypesAdditional.SOLIDIFIER, RecipeUtil.getRecipes(Minecraft.getInstance().level, (net.minecraft.world.item.crafting.RecipeType) ModuleCoreAdditional.SOLIDIFIER_TYPE.get()));
+        registration.addRecipes(IndustrialRecipeTypesAdditional.FACTORY_CONSTRUCTOR, RecipeUtil.getRecipes(Minecraft.getInstance().level, (RecipeType) ModuleCoreAdditional.FACTORY_CONSTRUCTOR_TYPE.get()));
+        registration.addRecipes(IndustrialRecipeTypesAdditional.UPGRADED_CONSTRUCTOR, RecipeUtil.getRecipes(Minecraft.getInstance().level, (RecipeType) ModuleCoreAdditional.UPGRADED_CONSTRUCTOR_TYPE.get()));
+        registration.addRecipes(IndustrialRecipeTypesAdditional.POLISHING_MACHINE, RecipeUtil.getRecipes(Minecraft.getInstance().level, (RecipeType) ModuleCoreAdditional.POLISHING_MACHINE_TYPE.get()));
+        registration.addRecipes(IndustrialRecipeTypesAdditional.SOLIDIFIER, RecipeUtil.getRecipes(Minecraft.getInstance().level, (RecipeType) ModuleCoreAdditional.SOLIDIFIER_TYPE.get()));
+        //registration.addRecipes(IndustrialRecipeTypesAdditional.SIFTER_MACHINE, RecipeUtil.getRecipes(Minecraft.getInstance().level, (RecipeType) ModuleCoreAdditional.SIFTER_MACHINE_TYPE.get()));
 
     }
 
@@ -103,7 +104,7 @@ public class JEICustomPluginAdditional implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(ModuleCoreAdditional.UPGRADED_CONSTRUCTOR.getBlock()), new mezz.jei.api.recipe.RecipeType[]{IndustrialRecipeTypesAdditional.UPGRADED_CONSTRUCTOR});
         registration.addRecipeCatalyst(new ItemStack(ModuleCoreAdditional.POLISHING_MACHINE.getBlock()), new mezz.jei.api.recipe.RecipeType[]{IndustrialRecipeTypesAdditional.POLISHING_MACHINE});
         registration.addRecipeCatalyst(new ItemStack(ModuleCoreAdditional.SOLIDIFIER.getBlock()), new mezz.jei.api.recipe.RecipeType[]{IndustrialRecipeTypesAdditional.SOLIDIFIER});
-
+       // registration.addRecipeCatalyst(new ItemStack(ModuleCoreAdditional.SIFTER_MACHINE.getBlock()), new mezz.jei.api.recipe.RecipeType[]{IndustrialRecipeTypesAdditional.SIFTER_MACHINE});
     }
 
     public void onRuntimeAvailable(IJeiRuntime jeiRuntime) {

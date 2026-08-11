@@ -1,0 +1,33 @@
+{
+  "itemGroup.industrialforegoingadditional_core": "Industrial Foregoing Additional: Core",
+  "itemGroup.industrialforegoingadditional_survival": "Industrial Foregoing Additional: Survival",
+
+  "item.industrialforegoingadditional.netherite_gear": "Незерітова Шестерня",
+  "item.industrialforegoingadditional.polished_diamond": "Полірований Діамант",
+  "item.industrialforegoingadditional.polished_emerald": "Полірований Смарагд",
+  "item.industrialforegoingadditional.polished_amethyst_shard": "Полірований Аметистовий Кристал",
+  "item.industrialforegoingadditional.plastic_elytra": "Пластикові Крила",
+
+
+  "item.industrialforegoingadditional.darkest_void_bucket": "Відро Темної Порожнечі",
+  "item.industrialforegoingadditional.dirty_mineral_water_bucket": "Відро Грязної Мінеральної Води",
+
+  "fluid_type.industrialforegoingadditional.darkest_void": "Темна Порожнеча",
+  "fluid_type.industrialforegoingadditional.dirty_mineral_water": "Грязна Мінеральна Вода",
+
+
+  "block.industrialforegoingadditional.machine_frame_ultimate": "Ультимативна Оболонка Машини",
+  "block.industrialforegoingadditional.factory_constructor": "Фабричний Конструктор",
+  "block.industrialforegoingadditional.polishing_machine": "Полірувальна Машина",
+  "block.industrialforegoingadditional.upgraded_constructor": "Конструктор Покращень",
+  "block.industrialforegoingadditional.repair_machine": "Ремонтна Машина",
+  "block.industrialforegoingadditional.solidifier": "Машина для Отвердіння",
+  "block.industrialforegoingadditional.sifter_machine": "Машина для Просіювання",
+  "block.industrialforegoingadditional.block_detector": "Детектор Блоків",
+
+  "emi.category.industrialforegoingadditional.factory_constructor": "Фабричний Конструктор",
+  "emi.category.industrialforegoingadditional.polishing_machine": "Полірувальна Машина",
+  "emi.category.industrialforegoingadditional.upgraded_constructor": "Конструктор Покращень",
+  "emi.category.industrialforegoingadditional.solidifier": "Машина для Отвердіння",
+  "emi.category.industrialforegoingadditional.sifter_machine": "Машина для Просіювання"
+}

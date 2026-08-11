@@ -1,5 +1,7 @@
 package net.mrpup.industrialforegoingadditional.config.item;
 
+/* Update
+
 import com.hrznstudio.titanium.annotation.config.ConfigFile;
 import com.hrznstudio.titanium.annotation.config.ConfigVal;
 import net.mrpup.industrialforegoingadditional.config.ModConfigItem;
@@ -16,3 +18,5 @@ public class EnergyElytraConfig {
     )
     public static int maxDurability = 100000;
 }
+
+ */

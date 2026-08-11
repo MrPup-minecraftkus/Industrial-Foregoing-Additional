@@ -8,7 +8,7 @@ import net.mrpup.industrialforegoingadditional.config.ModConfigItem;
 public class PlasticElytraConfig {
 
     @ConfigVal(
-            comment = "Max Speed - Default: [3], Classic Elytra = 1"
+            comment = "Max Speed - Default: [2], Classic Elytra = 1"
     )
     public static int MaxSpeed = 2;
     @ConfigVal(

@@ -121,7 +121,15 @@ configurations {
 dependencies {
     implementation "curse.maven:industrial-foregoing-266515:7600395"
     implementation "curse.maven:titanium-287342:5865916"
-    implementation "curse.maven:jei-238222:5846880"
+
+    if (jei == "true") {
+        runtimeOnly "curse.maven:jei-238222:5846880"
+    } else {
+        runtimeOnly "curse.maven:emi-580555:8081408"
+    }
+    compileOnly "curse.maven:emi-580555:8081408"
+    compileOnly "curse.maven:jei-238222:5846880"
+    implementation "curse.maven:emi-580555:8081408"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

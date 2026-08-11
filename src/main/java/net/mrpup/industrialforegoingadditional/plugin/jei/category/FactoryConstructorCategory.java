@@ -1,6 +1,5 @@
 package net.mrpup.industrialforegoingadditional.plugin.jei.category;
 
-import com.buuz135.industrial.config.machine.core.DissolutionChamberConfig;
 import com.hrznstudio.titanium.api.client.AssetTypes;
 import com.hrznstudio.titanium.client.screen.addon.EnergyBarScreenAddon;
 import com.hrznstudio.titanium.client.screen.addon.SlotsScreenAddon;
@@ -24,9 +23,10 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.mrpup.industrialforegoingadditional.block.core.tile.FactoryConstructorTile;
+import net.mrpup.industrialforegoingadditional.config.machine.core.FactoryConstructorConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
 import net.mrpup.industrialforegoingadditional.plugin.jei.IndustrialRecipeTypesAdditional;
-import net.mrpup.industrialforegoingadditional.recipe.FactoryConstructorRecipe;
+import net.mrpup.industrialforegoingadditional.recipe.core.FactoryConstructorRecipe;
 import net.neoforged.neoforge.fluids.FluidStack;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -98,7 +98,7 @@ public class FactoryConstructorCategory implements IRecipeCategory<FactoryConstr
         AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_SMALL), 70, 32);
         AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER.getAsset(AssetTypes.TANK_NORMAL), 139, 14);
         AssetUtil.drawAsset(guiGraphics, Minecraft.getInstance().screen, IAssetProvider.getAsset(DefaultAssetProvider.DEFAULT_PROVIDER, AssetTypes.PROGRESS_BAR_BACKGROUND_ARROW_HORIZONTAL), 92, 33);
-        int consumed = recipe.processingTime * DissolutionChamberConfig.powerPerTick;
+        int consumed = recipe.processingTime * FactoryConstructorConfig.powerPerTick;
         EnergyBarScreenAddon.drawForeground(guiGraphics, Minecraft.getInstance().screen, DefaultAssetProvider.DEFAULT_PROVIDER, 0, 12, 0, 0, (double)consumed, (double)((int)Math.max((double)50000.0F, Math.ceil((double)consumed))));
     }
 

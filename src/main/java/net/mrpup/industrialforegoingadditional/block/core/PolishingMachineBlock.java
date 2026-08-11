@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
 
 public class PolishingMachineBlock extends IndustrialBlock<PolishingMachineTile> {
   public PolishingMachineBlock() {
-    super("polishing_machine", Properties.ofFullCopy(Blocks.IRON_BLOCK), PolishingMachineTile.class, ModuleCoreAdditional.TAB_CORE);
+    super("polishing_machine", Properties.ofFullCopy(Blocks.IRON_BLOCK), PolishingMachineTile.class, ModuleCoreAdditional.TAB_CORE_ADDITIONAL);
          }
 
  public BlockEntityType.BlockEntitySupplier<PolishingMachineTile> getTileEntityFactory() {

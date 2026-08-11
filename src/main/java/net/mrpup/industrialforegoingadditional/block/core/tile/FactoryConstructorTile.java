@@ -1,8 +1,8 @@
 package net.mrpup.industrialforegoingadditional.block.core.tile;
 
-import net.mrpup.industrialforegoingadditional.config.machine.FactoryConstructorConfig;
+import net.mrpup.industrialforegoingadditional.config.machine.core.FactoryConstructorConfig;
 import net.mrpup.industrialforegoingadditional.module.ModuleCoreAdditional;
-import net.mrpup.industrialforegoingadditional.recipe.FactoryConstructorRecipe;
+import net.mrpup.industrialforegoingadditional.recipe.core.FactoryConstructorRecipe;
 import com.buuz135.industrial.block.tile.IndustrialProcessingTile;
 import com.hrznstudio.titanium.annotation.Save;
 import com.hrznstudio.titanium.component.bundle.LockableInventoryBundle;
